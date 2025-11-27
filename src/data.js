@@ -12,16 +12,76 @@ import domsnapshot from "../images/logo-dom-snapshot.svg";
 import consoleplus from "../images/logo-console-plus.svg";
 
 export const cardsData = [
-    { logo: devlens, name: "DevLens", description: "Quickly inspect page layouts", isActive: true },
-    { logo: stylespy, name: "StyleSpy", description: "Instantly analyze and copy CSS", isActive: true },
-    { logo: speedboost, name: "SpeedBoost", description: "Optimizes browser usage", isActive: false },
-    { logo: jsonwizard, name: "JSONWizard", description: "Formats and prettifies JSON", isActive: true },
-    { logo: tabmaster, name: "TabMaster Pro", description: "Organizes browser tabs", isActive: true },
-    { logo: viewportbuddy, name: "ViewportBuddy", description: "Simulates screen resolutions", isActive: false },
-    { logo: markupnotes, name: "Markup Notes", description: "Annotate webpages", isActive: true },
-    { logo: gridguides, name: "GridGuides", description: "Customizable alignment grids", isActive: false },
-    { logo: palettepicker, name: "Palette Picker", description: "Extracts color palettes", isActive: true },
-    { logo: linkchecker, name: "LinkChecker", description: "Find broken links", isActive: true },
-    { logo: domsnapshot, name: "DOM Snapshot", description: "Capture DOM fast", isActive: false },
-    { logo: consoleplus, name: "ConsolePlus", description: "Advanced filtering console", isActive: true }
+    {
+        logo: devlens,
+        name: "DevLens",
+        description: "Quickly inspect page layouts and visualize element boundaries.",
+        isActive: true,
+    },
+    {
+        logo: stylespy,
+        name: "StyleSpy",
+        description: "Instantly analyze and copy CSS from any webpage element.",
+        isActive: true,
+    },
+    {
+        logo: speedboost,
+        name: "SpeedBoost",
+        description: "Optimizes browser resource usage to accelerate page loading.",
+        isActive: false,
+    },
+    {
+        logo: jsonwizard,
+        name: "JSONWizard",
+        description: "Formats, validates, and prettifies JSON responses in-browser.",
+        isActive: true,
+    },
+    {
+        logo: tabmaster,
+        name: "TabMaster Pro",
+        description: "Organizes browser tabs into groups and sessions.",
+        isActive: true,
+    },
+    {
+        logo: viewportbuddy,
+        name: "ViewportBuddy",
+        description: "Simulates various screen resolutions directly within the browser.",
+        isActive: false,
+    },
+    {
+        logo: markupnotes,
+        name: "Markup Notes",
+        description: "Enables annotation and notes directly onto webpages for collaborative debugging.",
+        isActive: true,
+    },
+    {
+        logo: gridguides,
+        name: "GridGuides",
+        description: "Overlay customizable grids and alignment guides on any webpage.",
+        isActive: false,
+    },
+    {
+        logo: palettepicker,
+        name: "Palette Picker",
+        description: "Instantly extracts color palettes from any webpage.",
+        isActive: true,
+    },
+    {
+        logo: linkchecker,
+        name: "LinkChecker",
+        description: "Scans and highlights broken links on any page.",
+        isActive: true,
+    },
+    {
+        logo: domsnapshot,
+        name: "DOM Snapshot",
+        description: "Capture and export DOM structures quickly.",
+        isActive: false,
+    },
+    {
+        logo: consoleplus,
+        name: "ConsolePlus",
+        description: "Enhanced developer console with advanced filtering and logging.",
+        isActive: true,
+    },
 ];
