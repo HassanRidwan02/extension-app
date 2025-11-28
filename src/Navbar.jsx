@@ -6,10 +6,7 @@ export default function Navbar({ theme, toggleTheme }) {
     return (
         <div className='navbar'>
 
-
             <img src={logo} alt="" />
-
-
             <div className='light-dark'>
                 <img
                     src={theme === 'light' ? moon : sun}

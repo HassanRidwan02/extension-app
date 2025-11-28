@@ -7,6 +7,8 @@
   font-style: normal;
 }
 
+
+
 :root {
   --bg-color: white;
   --text-color: black;
@@ -163,4 +165,30 @@ body {
 .toggle-btn .thumb.active {
   transform: translateX(25px);
   background: hsl(3, 71%, 56%);
+}
+
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .box {
+    width: 48%;
+    margin: auto;
+    background-color: var(--element-bg);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .extension-lists {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
