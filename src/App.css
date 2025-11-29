@@ -41,7 +41,7 @@ body {
 }
 
 .inner-container {
-  width: 80%;
+  width: 85%;
   margin: auto;
 }
 
@@ -55,6 +55,8 @@ body {
   align-items: center;
   box-shadow: var(--shadow);
   transition: background-color 0.3s;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .mode {
@@ -69,6 +71,20 @@ body {
 .extension-lists {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.extension-lists h2 {
+  width: 100%;
+}
+
+.extension-lists .btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 
@@ -100,14 +116,15 @@ body {
 }
 
 .box {
-  width: 23%;
-  margin: auto;
+  width: calc(25% - 15px);
   background-color: var(--element-bg);
   color: var(--text-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: var(--shadow);
   transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -117,14 +134,27 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.name-description {
+  flex: 1;
+  min-width: 0;
+}
+
+.name-description h2 {
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
 
 .name-description p {
-  max-width: 200px;
+  font-size: 0.9rem;
+  max-width: 100%;
 }
 
 .box .top .small-logo {
-  margin-right: 20px;
+  flex-shrink: 0;
 }
 
 .bottom {
@@ -137,9 +167,17 @@ body {
   border: 1px solid #898d93;
   border-radius: 20px;
   background-color: transparent;
-  padding: 10px;
-  width: 90px;
+  padding: 8px 12px;
+  min-width: 80px;
   font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.remove-btn:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
 .toggle-btn {
@@ -168,16 +206,312 @@ body {
 }
 
 
-@media (min-width: 768px) and (max-width: 900px) {
+/* Tablet (768px to 1024px) */
+@media (max-width: 1024px) {
+  .inner-container {
+    width: 90%;
+  }
+
   .box {
-    width: 48%;
-    margin: auto;
-    background-color: var(--element-bg);
-    color: var(--text-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    transition: background-color 0.3s, color 0.3s;
+    width: calc(33.333% - 14px);
+  }
+
+  .navbar {
+    flex-direction: row;
+  }
+
+  .name-description p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Tablet (600px to 768px) */
+@media (max-width: 768px) {
+  .inner-container {
+    width: 92%;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .navbar {
+    padding: 12px;
+    margin: 15px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar img {
+    width: 40px;
+    height: auto;
+  }
+
+  .light-dark {
+    align-self: flex-end;
+  }
+
+  .extension-lists {
+    flex-direction: column;
+  }
+
+  .extension-lists h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .extension-lists .btns {
+    width: 100%;
+  }
+
+  .extension-lists button {
+    flex: 1;
+    min-width: 80px;
+    padding: 10px 5px;
+    font-size: 0.9rem;
+  }
+
+  .card-container {
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  .box {
+    width: calc(50% - 8px);
+    padding: 15px;
+  }
+
+  .box .top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .small-logo {
+    margin-right: 0 !important;
+  }
+
+  .small-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .name-description h2 {
+    font-size: 0.95rem;
+  }
+
+  .name-description p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .bottom {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .remove-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .toggle-btn {
+    width: 45px;
+    height: 24px;
+  }
+
+  .toggle-btn .thumb {
+    width: 18px;
+    height: 18px;
+  }
+
+  .toggle-btn .thumb.active {
+    transform: translateX(21px);
+  }
+}
+
+/* Mobile (480px to 600px) */
+@media (max-width: 600px) {
+  .inner-container {
+    width: 95%;
+  }
+
+  .container {
+    padding: 10px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    padding: 10px;
+    margin: 10px 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar img {
+    width: 35px;
+  }
+
+  .extension-lists h2 {
+    font-size: 1.1rem;
+  }
+
+  .extension-lists .btns {
+    gap: 8px;
+  }
+
+  .extension-lists button {
+    padding: 8px 5px;
+    font-size: 0.85rem;
+  }
+
+  .card-container {
+    gap: 12px;
+    margin: 12px 0;
+  }
+
+  .box {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .small-logo img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .name-description h2 {
+    font-size: 0.9rem;
+  }
+
+  .name-description p {
+    font-size: 0.75rem;
+  }
+
+  .remove-btn {
+    padding: 8px;
+    font-size: 0.75rem;
+    min-width: 70px;
+  }
+
+  .toggle-btn {
+    width: 42px;
+    height: 22px;
+  }
+
+  .toggle-btn .thumb {
+    width: 16px;
+    height: 16px;
+  }
+
+  .toggle-btn .thumb.active {
+    transform: translateX(20px);
+  }
+}
+
+/* Small Mobile (320px to 480px) */
+@media (max-width: 480px) {
+  .inner-container {
+    width: 97%;
+  }
+
+  .container {
+    padding: 8px;
+  }
+
+  .navbar {
+    padding: 8px;
+    margin: 8px 0;
+  }
+
+  .navbar img {
+    width: 30px;
+  }
+
+  .light-dark {
+    width: 100%;
+    text-align: right;
+  }
+
+  .mode {
+    padding: 5px;
+  }
+
+  .extension-lists {
+    flex-direction: column;
+  }
+
+  .extension-lists h2 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .extension-lists .btns {
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .extension-lists button {
+    padding: 7px 5px;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .card-container {
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .box .top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .small-logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .name-description h2 {
+    font-size: 0.85rem;
+  }
+
+  .name-description p {
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .remove-btn {
+    padding: 6px;
+    font-size: 0.7rem;
+    min-width: 60px;
+  }
+
+  .toggle-btn {
+    width: 40px;
+    height: 20px;
+  }
+
+  .toggle-btn .thumb {
+    width: 14px;
+    height: 14px;
+  }
+
+  .toggle-btn .thumb.active {
+    transform: translateX(20px);
   }
 }
 
@@ -191,4 +525,13 @@ body {
     flex-direction: column;
   }
 
+  .btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btns button {
+    width: 100%;
+  }
 }
